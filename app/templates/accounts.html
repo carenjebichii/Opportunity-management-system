@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for account in accounts %}
+        <div class="account">
+            <a href="#">{{account.name}}</a>
+        </div>
+    {% endfor %}
+{% endblock content %}
