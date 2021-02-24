@@ -4,6 +4,7 @@ from wtforms.validators import DataRequired, ValidationError, Email, Length, Reg
 from ..main.models import User
 
 
+#this is to save time instead of creating forms all over again
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email(), Length(1, 64)])
     username = StringField('Useranme', validators=[DataRequired(), Length(1, 64), Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
